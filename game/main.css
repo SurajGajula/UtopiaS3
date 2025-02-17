@@ -2,24 +2,23 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
     background-color: #1a1a1a; /* 10% gray */
+    position: relative; /* This allows absolute positioning of children */
 }
 
-.main-content {
-    flex: 1;
-}
-
-.button-column {
+.rightUI {
+    position: fixed; /* This fixes the column to the viewport */
+    right: 0; /* Aligns to the right side */
+    top: 0; /* Aligns to the top */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* This will evenly distribute buttons */
-    height: 100vh; /* Full viewport height */
+    justify-content: space-evenly;
+    height: 100vh;
     padding: 40px;
-    background-color: #cccccc; /* 80% gray */
+    opacity: 0.5;
 }
 
-.button-column button {
+.rightUI button {
     padding: 40px 80px;
     border: none;
     border-radius: 8px;
@@ -34,13 +33,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.button-column button:hover {
+.rightUI button:hover {
     background-color: #333333;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.button-column button:active {
+.rightUI button:active {
     transform: scale(0.98);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
