@@ -2,14 +2,19 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #1a1a1a; /* 10% gray */
-    position: relative; /* This allows absolute positioning of children */
+    background-color: #1a1a1a;
+    /* 10% gray */
+    position: relative;
+    /* This allows absolute positioning of children */
 }
 
-.rightUI {
-    position: fixed; /* This fixes the column to the viewport */
-    right: 0; /* Aligns to the right side */
-    top: 0; /* Aligns to the top */
+.RightUI {
+    position: fixed;
+    /* This fixes the column to the viewport */
+    right: 0;
+    /* Aligns to the right side */
+    top: 0;
+    /* Aligns to the top */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -18,12 +23,12 @@ body {
     opacity: 0.5;
 }
 
-.rightUI button {
+.RightUI button {
     padding: 40px 80px;
     border: none;
     border-radius: 8px;
-    background-color: #1a1a1a; /* 10% gray */
-    color: #cccccc; /* 80% gray */
+    background-color: #1a1a1a;
+    color: #cccccc;
     cursor: pointer;
     font-size: 24px;
     font-family: 'Arial', sans-serif;
@@ -33,13 +38,35 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.rightUI button:hover {
+.RightUI button:hover {
     background-color: #333333;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.rightUI button:active {
+.RightUI button:active {
     transform: scale(0.98);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #1a1a1a;
+    color: #cccccc;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
